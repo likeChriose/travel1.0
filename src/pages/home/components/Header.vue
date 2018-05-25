@@ -29,26 +29,26 @@ export default {
     background:$bgColor
     color:#fff
     .header-left
-      width:0.64rem
-      float:left
+      width: 0.64rem
+      float: left
       .back-icon
-        text-align:center
-        font-size:.4rem
+        text-align: center
+        font-size: .4rem
     .header-input
-      flex:1
-      margin-top:.12rem
-      line-height.64rem
-      height:.64rem
-      margin-left:.2rem
-      padding-left:0.2rem
-      background:#fff
-      border-radius.1rem
+      flex: 1
+      margin-top :.12rem
+      line-height .64rem
+      height :.64rem
+      margin-left :.2rem
+      padding-left :0.2rem
+      background: #fff
+      border-radius .1rem
       color:#ccc
     .header-right
-      width:1.24rem
-      float:right
-      text-align:center
+      width: 1.24rem
+      float: right
+      text-align :center
       .arrow-icon
-        font-size.24rem
-        margin-left:-.04rem
+        font-size .24rem
+        margin-left :-.04rem
 </style>
