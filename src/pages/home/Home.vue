@@ -2,9 +2,7 @@
   <div>
     <home-header></home-header>
     <home-swiper></home-swiper>
-    <div>test</div>
   </div>
-
 </template>
 
 <script>
