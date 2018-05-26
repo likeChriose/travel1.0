@@ -64,6 +64,16 @@ export default {
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
           desc: '经典景点',
         },
+        {
+          id: '0010',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+          desc: '经典景点',
+        },
+        {
+          id: '0011',
+          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+          desc: '经典景点',
+        },
       ],
     };
   },
