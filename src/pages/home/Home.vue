@@ -19,7 +19,6 @@ export default {
     HomeIcons,
   },
 };
-
 </script>
 
 <style scoped>
