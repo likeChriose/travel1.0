@@ -19,61 +19,39 @@ export default {
   data() {
     return {
       iconList: [
-        {
-          id: '0001',
+        { id: '0001',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0002',
+          desc: '经典景点',},
+        { id: '0002',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0003',
+          desc: '经典景点',},
+        { id: '0003',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0004',
+          desc: '经典景点',},
+        { id: '0004',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0005',
+          desc: '经典景点',},
+        { id: '0005',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0006',
+          desc: '经典景点',},
+        { id: '0006',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0007',
+          desc: '经典景点',},
+        { id: '0007',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0008',
+          desc: '经典景点',},
+        { id: '0008',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0009',
+          desc: '经典景点',},
+        { id: '0009',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0010',
+          desc: '经典景点',},
+        { id: '0010',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
-        {
-          id: '0011',
+          desc: '经典景点',},
+        { id: '0011',
           imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '经典景点',
-        },
+          desc: '经典景点',},
       ],
     };
   },
