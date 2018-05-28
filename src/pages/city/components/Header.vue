@@ -27,7 +27,6 @@ export default {
     .city-back
       position: absolute
       top: 0
-      left: 0.1rem
       color: #fff
       font-size: 0.4rem
 
