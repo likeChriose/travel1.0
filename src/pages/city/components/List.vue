@@ -13,65 +13,15 @@
       <div class="area border-topbottom">
         <div class="title">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for= "item of hotCities" :key="item.id">
+            <div class="button">{{item.name }}</div>
           </div>
         </div>
       </div>
-      <div class="area border-topbottom">
-        <div class="title">A</div>
+      <div class="area border-topbottom" v-for= "(json,key) of cities" :key= "key">
+        <div class="title">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom">阿拉尔</div>
-          <div class="item border-bottom">阿拉伯</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
-          <div class="item border-bottom">阿乱七八糟</div>
+          <div class="item border-bottom" v-for= "item of json" :key= "key.id">{{item.name}}</div>
         </div>
       </div>
     </div>
@@ -85,6 +35,10 @@ export default {
   name: 'CityList',
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper);
+  },
+  props: {
+    cities:Object,
+    hotCities: Array,
   }
 };
 </script>
