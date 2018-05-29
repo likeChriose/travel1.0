@@ -18,10 +18,17 @@
           </div>
         </div>
       </div>
-      <div class="area border-topbottom" v-for= "(json,key) of cities" :key= "key">
+      <div class="area border-topbottom"
+           v-for= "(json,key) of cities"
+           :key= "key"
+           :ref= "key"
+      >
         <div class="title">{{key}}</div>
         <div class="item-list">
-          <div class="item border-bottom" v-for= "item of json" :key= "key.id">{{item.name}}</div>
+          <div class="item border-bottom"
+               v-for= "item of json"
+               :key= "key.id"
+          >{{item.name}}</div>
         </div>
       </div>
     </div>
@@ -39,6 +46,15 @@ export default {
   props: {
     cities:Object,
     hotCities: Array,
+    letters :String,
+  },
+  watch: {
+    letters(){
+      if(this.letters) {
+        const element = this.$refs[this.letters][0]
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 };
 </script>
