@@ -57,6 +57,7 @@ export default {
             if(index >= 0 && index < this.letter.length) {
               this.$emit('change',this.letter[index]);
             }
+            this.startY= 50
           })
         }
     },
