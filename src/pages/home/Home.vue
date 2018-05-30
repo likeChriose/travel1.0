@@ -22,6 +22,7 @@ export default {
   name: 'Home',
   data() {
     return {
+      lastCity: '',
       swiperList: [],
       iconList: [],
       recommendList:[],
@@ -53,7 +54,10 @@ export default {
   },
   mounted () {
     this.getHomeInfo();
-  }
+  },
+  activated () {
+
+  },
 };
 </script>
 

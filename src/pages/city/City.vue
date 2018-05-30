@@ -16,14 +16,19 @@ import CityHeader from './components/Header';
 import CitySearch from './components/Search';
 import CityList from './components/List';
 import CityAlphaList from './components/AlphaList';
+import {mapState} from 'vuex';
 export default {
   name: 'City',
   data () {
     return {
+      lastCity: '',
       cities: {},
       hotCities: [],
       letters: '',
     }
+  },
+  computed: {
+    ...mapState(['city'])
   },
   components: {
     CityHeader,
@@ -33,7 +38,7 @@ export default {
   },
   methods: {
     getCityInfo() {
-      axios.get('/api/city.json').
+      axios.get('/api/city.json?city='+this.city).
       then(this.getCityInfoSuccess)
     },
     getCityInfoSuccess(msg) {
@@ -49,7 +54,15 @@ export default {
     }
   },
   mounted () {
+    this.lastCity = this.city
     this.getCityInfo()
+  },
+  activated(){
+    if(this.lastCity !== this.city){
+      this.lastCity = this.city
+      this.getCityInfo()
+    }
+
   },
 };
 </script>
