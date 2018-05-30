@@ -9,9 +9,12 @@ import fastClick from 'fastclick';
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import store from './store';
 
 Vue.config.productionTip = false;
+
 fastClick.attach(document.body);
+
 Vue.use(VueAwesomeSwiper);
 
 /* eslint-disable no-new */
@@ -19,6 +22,7 @@ Vue.use(VueAwesomeSwiper);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
 });

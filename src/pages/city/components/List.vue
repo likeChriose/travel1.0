@@ -5,7 +5,7 @@
         <div class="title">当前城市</div>
         <div class="button-list">
           <div class="button-wrapper">
-            <div class="button">北京</div>
+            <div class="button">{{this.nowCity}}</div>
           </div>
         </div>
       </div>
@@ -14,7 +14,7 @@
         <div class="title">热门城市</div>
         <div class="button-list">
           <div class="button-wrapper" v-for= "item of hotCities" :key="item.id">
-            <div class="button">{{item.name }}</div>
+            <div class="button" @click="handelCityClick(item.name)">{{item.name}}</div>
           </div>
         </div>
       </div>
@@ -28,6 +28,7 @@
           <div class="item border-bottom"
                v-for= "item of json"
                :key= "key.id"
+               @click="handelCityClick(item.name)"
           >{{item.name}}</div>
         </div>
       </div>
@@ -37,11 +38,26 @@
 
 <script>
 import Bscroll from 'better-scroll';
+import  {mapState,mapMutations} from 'vuex'
 
 export default {
   name: 'CityList',
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper);
+  },
+  methods:{
+    handelCityClick(city) {
+      this.changeCity(city)
+      this.$router.push({
+        path: '/',
+      });
+    },
+    ...mapMutations(['changeCity'])
+  },
+  computed: {
+    ...mapState({
+      nowCity: 'city'
+    })
   },
   props: {
     cities:Object,
