@@ -16,8 +16,6 @@ import HomeIcons from './components/Icons';
 import HomeRecommend from './components/Recommend';
 import HomeWeekend from './components/Weekend';
 
-
-
 export default {
   name: 'Home',
   data() {
