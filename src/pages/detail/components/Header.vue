@@ -24,23 +24,22 @@ export default {
     }
   },
   methods: {
-    hadelScroll() {
-      console.log('scroll');
+    handelScroll() {
       const element = document.documentElement.scrollTop
       if(element >60) {
         this.show =true;
-        const opacity=opacity>1?1:element/240;
+        const opacity = opacity>1 ? 1 :element/240;
         this.opacityStyle={opacity}
       }else{
         this.show =false
       }
     }
   },
-  activated(){
-    window.addEventListener('scroll',this.hadelScroll)
+  mounted () {
+    window.addEventListener('scroll',this.handelScroll)
   },
-  deactivated() {
-    window.removeEventListener('scroll',this.hadelScroll)
+  destroyed () {
+    window.removeEventListener('scroll',this.handelScroll)
   },
 }
 </script>
