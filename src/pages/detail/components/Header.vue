@@ -25,6 +25,7 @@ export default {
   },
   methods: {
     hadelScroll() {
+      console.log('scroll');
       const element = document.documentElement.scrollTop
       if(element >60) {
         this.show =true;
@@ -35,10 +36,12 @@ export default {
       }
     }
   },
-
   activated(){
     window.addEventListener('scroll',this.hadelScroll)
-  }
+  },
+  deactivated() {
+    window.removeEventListener('scroll',this.hadelScroll)
+  },
 }
 </script>
 
